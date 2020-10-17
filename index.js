@@ -13,7 +13,9 @@ const app = express();
 
 
 
-
+//Handlebars Middle ware
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 
 const PORT = process.env.PORT || 5000;
 
